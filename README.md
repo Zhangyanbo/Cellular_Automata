@@ -36,6 +36,8 @@ plt.imshow(1-s, cmap='gray')
 plt.show()
 ```
 
+![](./images/game_of_life_random.png)
+
 ### Totalistic CAs
 
 ```python
@@ -50,6 +52,8 @@ plt.imshow(1-s, cmap='gray')
 plt.show()
 ```
 
+![](./images/totalistic_random.png)
+
 ### Outer-totalistic CAs
 
 ```python
@@ -63,3 +67,5 @@ plt.figure(figsize=(8, 8))
 plt.imshow(1-s, cmap='gray')
 plt.show()
 ```
+
+![](./images/outer_totalistic_random.png)
