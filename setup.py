@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="CA",
-    version="1.0.0",
+    version="1.1.0",
     author="Yanbo Zhang",
     author_email="Zhang.Yanbo@asu.edu",
     description="A package for implementing cellular automata",
