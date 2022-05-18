@@ -22,7 +22,7 @@ def TotalisticCA(code, init_state, steps, device='cpu'):
     '''
     arr = init_state
     for i in range(steps):
-        arr = totalistic_update(arr, code)
+        arr = totalistic_update(arr, code, dev=device)
     return arr
 
 def OuterTotalisticCA(code, init_state, steps, device='cpu'):
@@ -43,5 +43,5 @@ def OuterTotalisticCA(code, init_state, steps, device='cpu'):
     '''
     arr = init_state
     for i in range(steps):
-        arr = outer_totalistic_update(arr, code)
+        arr = outer_totalistic_update(arr, code, dev=device)
     return arr

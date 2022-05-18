@@ -9,11 +9,15 @@ def f(x, code):
     '''
     return int(code & (1 << x) > 0)
 
-def totalistic_update(arr, code):
+def totalistic_update(arr, code, dev='cpu'):
     r'''Apply totalistic update rule on [arr], with rule number [code].
     '''
-    n = neighbor_count(arr)
-    output = torch.zeros_like(n).long()
+    arr = arr.to(dev)
+
+    n = neighbor_count(arr, dev=dev)
+    
+    output = torch.zeros_like(n)
     for i in range(10):
         output[n == i] = f(i, code)
-    return output
+    
+    return output.type(arr.type())
